@@ -45,12 +45,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center cyber-glow">
-                        <span class="text-xl font-bold text-black">A</span>
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-lg flex items-center justify-center cyber-glow">
+                        <span class="text-lg sm:text-xl font-bold text-black">A</span>
                     </div>
-                    <span class="text-xl font-bold text-white">Astreon Security</span>
+                    <span class="text-lg sm:text-xl font-bold text-white">Astreon Security</span>
                 </div>
                 
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="text-white hover:text-white transition-colors">Home</a>
                     <a href="#services" class="text-white hover:text-white transition-colors">Services</a>
@@ -58,30 +59,51 @@
                     <a href="#contact" class="text-white hover:text-white transition-colors">Contact</a>
                 </div>
                 
-                <button onclick="scrollToContact()" class="bg-white hover:bg-white text-black px-6 py-2 rounded-lg transition-colors">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop CTA Button -->
+                <button onclick="scrollToContact()" class="hidden md:block bg-white hover:bg-white text-black px-6 py-2 rounded-lg transition-colors">
                     Free Consultation
                 </button>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-white hover:text-white transition-colors py-2 border-b border-gray-700">Home</a>
+                    <a href="#services" class="text-white hover:text-white transition-colors py-2 border-b border-gray-700">Services</a>
+                    <a href="#technology" class="text-white hover:text-white transition-colors py-2 border-b border-gray-700">Technology</a>
+                    <a href="#contact" class="text-white hover:text-white transition-colors py-2 border-b border-gray-700">Contact</a>
+                    <button onclick="scrollToContact()" class="bg-white hover:bg-white text-black px-6 py-3 rounded-lg transition-colors mt-4 w-full">
+                        Free Consultation
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gray-900 min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+    <section id="home" class="bg-gray-900 min-h-screen flex items-center pt-24 sm:pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     <span class="text-white">Cybersecurity</span> Protection 
                     Powered by <span class="text-white">AI</span>
                 </h1>
-                <p class="text-xl text-white mb-8 leading-relaxed">
+                <p class="text-lg sm:text-xl text-white mb-8 leading-relaxed">
                     We defend your business with cutting-edge technology and advanced artificial intelligence. 
                     Proactive detection, automated response, and 24/7 protection.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button onclick="scrollToContact()" class="bg-white hover:bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors pulse-glow">
+                    <button onclick="scrollToContact()" class="bg-white hover:bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-colors pulse-glow">
                         Free Assessment
                     </button>
-                    <button onclick="showDemo()" class="border border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                    <button onclick="showDemo()" class="border border-white text-white hover:bg-white hover:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-colors">
                         View Demo
                     </button>
                 </div>
@@ -135,113 +157,113 @@
                 <p class="text-xl text-black">Comprehensive AI-powered cybersecurity solutions</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Service 1 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         🛡️
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">AI Threat Detection</h3>
-                    <p class="text-white">Machine learning algorithms that identify and neutralize threats in real-time, before they can affect your infrastructure.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">AI Threat Detection</h3>
+                    <p class="text-sm md:text-base text-white">Machine learning algorithms that identify and neutralize threats in real-time, before they can affect your infrastructure.</p>
                 </div>
                 
                 <!-- Service 2 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         🤖
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Automated Response</h3>
-                    <p class="text-white">Autonomous systems that respond instantly to incidents, minimizing exposure time and potential damage.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Automated Response</h3>
+                    <p class="text-sm md:text-base text-white">Autonomous systems that respond instantly to incidents, minimizing exposure time and potential damage.</p>
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         📊
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Predictive Analytics</h3>
-                    <p class="text-white">Prediction of future vulnerabilities and attacks through pattern analysis and anomalous behavior detection.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Predictive Analytics</h3>
+                    <p class="text-sm md:text-base text-white">Prediction of future vulnerabilities and attacks through pattern analysis and anomalous behavior detection.</p>
                 </div>
                 
                 <!-- Service 4 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         🔒
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Security Auditing</h3>
-                    <p class="text-white">Comprehensive evaluations of your infrastructure with personalized AI-based recommendations.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Security Auditing</h3>
+                    <p class="text-sm md:text-base text-white">Comprehensive evaluations of your infrastructure with personalized AI-based recommendations.</p>
                 </div>
                 
                 <!-- Service 5 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         👥
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Staff Training</h3>
-                    <p class="text-white">Adaptive training programs that use AI to personalize learning according to each employee's role and level.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Staff Training</h3>
+                    <p class="text-sm md:text-base text-white">Adaptive training programs that use AI to personalize learning according to each employee's role and level.</p>
                 </div>
                 
                 <!-- Service 6 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         ⚡
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">24/7 Monitoring</h3>
-                    <p class="text-white">Continuous surveillance with intelligent alerts and automatic escalation based on threat severity.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">24/7 Monitoring</h3>
+                    <p class="text-sm md:text-base text-white">Continuous surveillance with intelligent alerts and automatic escalation based on threat severity.</p>
                 </div>
                 
                 <!-- Service 7 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         🔐
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Penetration Testing</h3>
-                    <p class="text-white">Ethical hacking services to identify vulnerabilities before malicious actors can exploit them.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Penetration Testing</h3>
+                    <p class="text-sm md:text-base text-white">Ethical hacking services to identify vulnerabilities before malicious actors can exploit them.</p>
                 </div>
                 
                 <!-- Service 8 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         🌐
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Network Security</h3>
-                    <p class="text-white">Advanced firewall configuration, VPN setup, and network segmentation to protect your digital perimeter.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Network Security</h3>
+                    <p class="text-sm md:text-base text-white">Advanced firewall configuration, VPN setup, and network segmentation to protect your digital perimeter.</p>
                 </div>
                 
                 <!-- Service 9 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         💾
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Data Protection</h3>
-                    <p class="text-white">End-to-end encryption, secure backup solutions, and data loss prevention strategies.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Data Protection</h3>
+                    <p class="text-sm md:text-base text-white">End-to-end encryption, secure backup solutions, and data loss prevention strategies.</p>
                 </div>
                 
                 <!-- Service 10 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         📱
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Mobile Security</h3>
-                    <p class="text-white">Comprehensive mobile device management and app security for BYOD environments.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Mobile Security</h3>
+                    <p class="text-sm md:text-base text-white">Comprehensive mobile device management and app security for BYOD environments.</p>
                 </div>
                 
                 <!-- Service 11 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         ☁️
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Cloud Security</h3>
-                    <p class="text-white">Secure cloud migration, configuration, and ongoing protection for AWS, Azure, and Google Cloud.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Cloud Security</h3>
+                    <p class="text-sm md:text-base text-white">Secure cloud migration, configuration, and ongoing protection for AWS, Azure, and Google Cloud.</p>
                 </div>
                 
                 <!-- Service 12 -->
-                <div class="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
-                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                <div class="bg-gray-800 p-6 md:p-8 rounded-xl hover:bg-gray-700 transition-colors cyber-glow border border-white">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 md:mb-6">
                         🚨
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-white">Incident Response</h3>
-                    <p class="text-white">Rapid response team for security breaches with forensic analysis and recovery planning.</p>
+                    <h3 class="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-white">Incident Response</h3>
+                    <p class="text-sm md:text-base text-white">Rapid response team for security breaches with forensic analysis and recovery planning.</p>
                 </div>
             </div>
         </div>
@@ -351,9 +373,9 @@
                 <p class="text-xl text-black">Start protecting your business today</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-black">Ready for next-generation cybersecurity?</h3>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-black">Ready for next-generation cybersecurity?</h3>
                     <div class="space-y-4">
                         <div class="flex items-center space-x-3">
                             <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
@@ -508,6 +530,21 @@
             }
         });
 
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
         // Add active navigation highlighting
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section[id]');
@@ -529,5 +566,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976a237ad1f2cba6',t:'MTc1NjQ1MDQ4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976a2f28d0ee964b',t:'MTc1NjQ1MDk2MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
